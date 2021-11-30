@@ -21,6 +21,7 @@ result = soup.find(id="mosaic-provider-jobcards")
 jobs = result.findAll('td', class_='resultContent')
 #print(result)
 
+sys.stdout = open("indeed_search.txt", "w")
 for job in jobs:
     #title_element = job.find("h2", class_="jobTitle jobTitle-color-purple")
     title_element = job.findAll("span")[1]
