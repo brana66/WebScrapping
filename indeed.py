@@ -1,13 +1,18 @@
 #scapping data from indeed.com
+#url = "https://in.indeed.com/jobs?q=java+developer&l=Delhi"
 
 import requests
 from bs4 import BeautifulSoup
 import sys
 
 #print()
+#role = input("Enter your value: ")
+#print(role)
+
 print("--------------Sending request--------------")
-url = "https://in.indeed.com/jobs?q=full%20stack%20developer&l=Mumbai"
-page = requests.get(url)
+params = {'q': ' java developer', 'l': 'Mumbai'}
+page = requests.get('https://in.indeed.com/jobs', params=params)
+print(page.url)
 #print(page.text)
 
 #print()
